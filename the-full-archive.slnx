@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/aspire-orquestrator.ApiService/aspire-orquestrator.ApiService.csproj" />
+    <Project Path="src/aspire-orquestrator.AppHost/aspire-orquestrator.AppHost.csproj" />
+    <Project Path="src/aspire-orquestrator.ServiceDefaults/aspire-orquestrator.ServiceDefaults.csproj" />
+  </Folder>
+</Solution>
