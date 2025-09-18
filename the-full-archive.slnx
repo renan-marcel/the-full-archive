@@ -1,6 +1,10 @@
 <Solution>
+  <Folder Name="/solution-itens/">
+    <File Path="Directory.Packages.props" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="src/aspire-orquestrator.AppHost/aspire-orquestrator.AppHost.csproj" />
     <Project Path="src/aspire-orquestrator.ServiceDefaults/aspire-orquestrator.ServiceDefaults.csproj" />
+    <Project Path="src/the-full-archive.presentation.api/the-full-archive.presentation.api.csproj" />
   </Folder>
 </Solution>

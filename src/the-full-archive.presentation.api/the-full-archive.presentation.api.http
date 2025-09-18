@@ -1,0 +1,6 @@
+@the_full_archive.presentation.api_HostAddress = https://localhost:7214
+
+GET {{the_full_archive.presentation.api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
