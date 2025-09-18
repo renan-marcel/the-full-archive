@@ -11,7 +11,8 @@ var postgres = builder
     // Set Postgres container credentials from parameters
     .WithEnvironment("POSTGRES_USER", pgUser)
     .WithEnvironment("POSTGRES_PASSWORD", pgPassword)
-    .WithDataVolume(isReadOnly: false)
+    // Persist Postgres data to host folder
+    .WithDataBindMount("../../data/postgres")
     .WithLifetime(ContainerLifetime.Persistent);
 
 var n8ndb = postgres.AddDatabase("n8n");
