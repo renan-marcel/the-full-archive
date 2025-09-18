@@ -93,3 +93,5 @@ Thumbs.db
 ehthumbs.db
 
 # End of .gitignore
+
+/data/
