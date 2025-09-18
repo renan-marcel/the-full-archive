@@ -1,0 +1,3 @@
+[submodule "src/aspire-orquestrator.AppHost/Dockerfiles"]
+	path = src/aspire-orquestrator.AppHost/Dockerfiles
+	url = git@github.com:renan-marcel/dockerfiles.git
