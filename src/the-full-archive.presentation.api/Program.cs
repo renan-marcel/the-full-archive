@@ -1,3 +1,6 @@
+using the_full_archive.presentation.api.Endpoints;
+using TheFullArchive.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
@@ -7,6 +10,9 @@ builder.AddServiceDefaults();
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+// Clean Architecture DI: Infrastructure
+builder.Services.AddInfrastructure();
 
 var app = builder.Build();
 
@@ -24,4 +30,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+// Minimal API endpoints for Archives
+app.MapArchiveEndpoints();
+
+await app.RunAsync();

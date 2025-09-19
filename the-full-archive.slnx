@@ -5,6 +5,9 @@
   <Folder Name="/src/">
     <Project Path="src/aspire-orquestrator.AppHost/aspire-orquestrator.AppHost.csproj" />
     <Project Path="src/aspire-orquestrator.ServiceDefaults/aspire-orquestrator.ServiceDefaults.csproj" />
+    <Project Path="src/the-full-archive.application/the-full-archive.application.csproj" />
+    <Project Path="src/the-full-archive.domain/the-full-archive.domain.csproj" />
+    <Project Path="src/the-full-archive.infrastructure/the-full-archive.infrastructure.csproj" />
     <Project Path="src/the-full-archive.presentation.api/the-full-archive.presentation.api.csproj" />
   </Folder>
 </Solution>
