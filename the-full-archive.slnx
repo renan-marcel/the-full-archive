@@ -9,5 +9,6 @@
     <Project Path="src/the-full-archive.domain/the-full-archive.domain.csproj" />
     <Project Path="src/the-full-archive.infrastructure/the-full-archive.infrastructure.csproj" />
     <Project Path="src/the-full-archive.presentation.api/the-full-archive.presentation.api.csproj" />
+    <Project Path="src/the-full-archive.shared/the-full-archive.shared.csproj" />
   </Folder>
 </Solution>

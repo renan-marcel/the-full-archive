@@ -1,24 +1,31 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>the_full_archive.presentation.api</RootNamespace>
-    <UserSecretsId>7783987b-99ab-4546-8ea4-450011cefffb</UserSecretsId>
-    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <DockerfileContext>..\..</DockerfileContext>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<RootNamespace>TheFullArchive.Presentation.Api</RootNamespace>
+		<UserSecretsId>7783987b-99ab-4546-8ea4-450011cefffb</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerfileContext>..\..</DockerfileContext>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
+		<PackageReference Include="Serilog.AspNetCore" />
+		<PackageReference Include="Serilog.Sinks.Seq" />
+		<PackageReference Include="Swashbuckle.AspNetCore" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\aspire-orquestrator.ServiceDefaults\aspire-orquestrator.ServiceDefaults.csproj" />
-    <ProjectReference Include="..\the-full-archive.application\the-full-archive.application.csproj" />
-    <ProjectReference Include="..\the-full-archive.infrastructure\the-full-archive.infrastructure.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\aspire-orquestrator.ServiceDefaults\aspire-orquestrator.ServiceDefaults.csproj" />
+		<ProjectReference Include="..\the-full-archive.application\the-full-archive.application.csproj" />
+		<ProjectReference Include="..\the-full-archive.infrastructure\the-full-archive.infrastructure.csproj" />
+		<ProjectReference Include="..\the-full-archive.shared\the-full-archive.shared.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Controllers\" />
+	</ItemGroup>
 
 </Project>

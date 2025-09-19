@@ -1,4 +1,4 @@
-namespace the_full_archive.presentation.api;
+namespace TheFullArchive.Presentation.Api;
 
 public class WeatherForecast
 {

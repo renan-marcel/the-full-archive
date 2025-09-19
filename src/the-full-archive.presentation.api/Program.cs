@@ -1,27 +1,36 @@
-using the_full_archive.presentation.api.Endpoints;
+using Serilog;
+using TheFullArchive.application;
 using TheFullArchive.Infrastructure;
+using TheFullArchive.Presentation.Api.Endpoints;
+using TheFullArchive.Presentation.Api.Extensions;
+using TheFullArchive.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseSerilog((context, loggerConfig) => loggerConfig.ReadFrom.Configuration(context.Configuration));
+
 
 builder.AddServiceDefaults();
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+// Swashbuckle registrations
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
-// Clean Architecture DI: Infrastructure
+builder.Services.AddShared();
+builder.Services.AddApplication();
 builder.Services.AddInfrastructure();
 
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 app.MapDefaultEndpoints();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwaggerWithUi();
 }
 
 app.UseHttpsRedirection();
@@ -30,7 +39,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-// Minimal API endpoints for Archives
-app.MapArchiveEndpoints();
+// Minimal API endpoints
+app.MapWeatherForecastEndpoints();
 
 await app.RunAsync();
